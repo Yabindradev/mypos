@@ -1,16 +1,432 @@
 {% extends 'base/base.html'%}
+{% load static %}
 {% block body %}
 <style>
     main {
         margin-left: 10%;
-        padding: 1px 16px;
+        padding: 1px 1px;
+        background-color: rgb(179, 174, 184);
+        height: 100%;
 
+    }
+    section{
+        margin-left: 20px;
+        padding: 0;
+        margin-bottom: 50px;
+      
+    }
+    .category_filed{
+        margin-top: 20px;
+    }
+    button{
+        margin-right: 40px;
+    }
+    .menu{
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .menu_item{
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        display: flex;
+        margin-top: 20px;
+        width: 71%;
+        height: 600px;
+        background-color: cadetblue;
+        
+    }
+    .items{
+        margin-top:20px;
+        margin-left: 15px;
+        height: 140px;
+        width: 163px;
+        background-color: #fff;
+        margin-bottom:20px;
+
+        
+    }
+    .items img{
+        width: 164px;
+        height: 120px;
+    }
+      .items p{
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .order{
+        background-color: blueviolet;
+        margin-top: 20px;
+        border-radius: 10px;
+        margin-left: 10px;
+
+
+
+
+    }
+    .order_item{
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-family: Inria Serif;
+        font-weight: bold;
+        font-size: 17px;
+        height: 400px;
+        margin-right: 15px;
+         width: 97%;
+        
+    }
+
+    .line{
+        
+        background-color: red;
+        width: 100%;
+        height: 5px;
+    }
+    .total{
+        height: 100px;
+    }
+    strong{
+        float: right;
+        margin-right: 30px;
+    }
+    .total p{
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .total button{
+        width: 50%;
+        align-items: center;
+        text-align: center;
+        margin-left: 25%;
     }
 </style>
 <main>
-    <h3>
-        Menu pages
-    </h3>
+    <section>
+    <div class="category_filed">
+        <button type="button" class="btn btn-primary">Ice Crime</button>
+        <button type="button" class="btn btn-secondary">Hot Drink</button>
+        <button type="button" class="btn btn-success">Cold Drink</button>
+        <button type="button" class="btn btn-danger">Other</button>
+    </div>
+    <div class="menu">
+        <div class="menu_item">
+        <div class="items">
+            
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}}   ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+
+
+        <div class="items">
+        
+            {% for product in product %}
+            <img src="{{product.img.url}}" alt="">
+            <p>{{product.name}} ¥ {{product.price}}</p>
+            {% endfor %}
+        </div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+<div class="items">
+
+    {% for product in product %}
+    <img src="{{product.img.url}}" alt="">
+    <p>{{product.name}} ¥ {{product.price}}</p>
+    {% endfor %}
+</div>
+
+
+
+</div>
+   
+    <div class="order">
+        <div class="order_item">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">price</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for product in product %}
+
+            <tr>
+                <th scope="row">1</th>
+                <td>{{product.name}}</td>
+                <td>1</td>
+                <td>¥ {{product.price}}</td>
+            </tr>
+    {% endfor %}
+
+
+
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">2</th>
+        <td>{{product.name}}</td>
+        <td>2</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+
+
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">3</th>
+        <td>{{product.name}}</td>
+        <td></td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">4</th>
+        <td>{{product.name}}</td>
+        <td>1</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">5</th>
+        <td>{{product.name}}</td>
+        <td>1</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">5</th>
+        <td>{{product.name}}</td>
+        <td>1</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">5</th>
+        <td>{{product.name}}</td>
+        <td>1</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+    {% for product in product %}
+    
+    <tr>
+        <th scope="row">5</th>
+        <td>{{product.name}}</td>
+        <td>1</td>
+        <td>¥ {{product.price}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+
+        </tbody>
+    </table>
+    </div>
+    <div class="line"></div>
+
+    <div class="total">
+        <p>Sub Total : <strong>3000</strong>  <br>
+        Tax    : <strong>300</strong> <br>
+        Grand Total  : <strong>3300</strong></p>
+    
+        <button type="button" class="btn btn-primary">Pyment</button>
+</div>
+    </div>
+    </div>
+    </section>
+
 
 </main>
 {% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -14,7 +15,8 @@ def home(request):
 
 
 def menu(request):
-    return render (request, 'base/menu.html')
+    product = Products.objects.all()
+    return render (request, 'base/menu.html', {'product':product})
 
 
 def setting(request):
