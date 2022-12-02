@@ -19,11 +19,15 @@ class Products(models.Model):
     price = models.IntegerField()
     img = models.ImageField()
     refrence = models.TextField(blank = True)
+    created_at = models.DateTimeField(auto_now=True)
     
     
        
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['-created_at']
 
 class Order_products(models.Model):
     products = models.ForeignKey(Products, on_delete=models.CASCADE)

@@ -26,11 +26,11 @@
         display: flex;
     }
     .menu_item{
+         flex-wrap: wrap;
+        display: flex;
         overflow-x: hidden;
         overflow-y: auto;
         border-radius: 10px;
-        flex-wrap: wrap;
-        display: flex;
         margin-top: 20px;
         width: 71%;
         height: 600px;
@@ -50,6 +50,14 @@
     .items img{
         width: 164px;
         height: 120px;
+        margin-left: -6px;
+        margin-top: -6px;
+    }
+       .items button{
+        border: none;
+        width: 164px;
+        height: 120px;
+         
     }
       .items p{
         text-transform: capitalize;
@@ -103,6 +111,7 @@
         text-align: center;
         margin-left: 25%;
     }
+  
 </style>
 <main>
     <section>
@@ -113,205 +122,31 @@
         <button type="button" class="btn btn-danger">Other</button>
     </div>
     <div class="menu">
+        
         <div class="menu_item">
+            {% for product in product %}
         <div class="items">
+            <form method="post" action="">
+                {% csrf_token %}
+           <button><img src="{{product.img.url}}" alt="">{{product.name}} ¥ {{product.price}}
+        </button>
+           
+
             
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}}   ¥ {{product.price}}</p>
-            {% endfor %}
+                <div class="field has-addons">
+                    <div class="control">
+                        <input type="hidden" name="quantity" value="1" class="input" min="1">
+                    </div>
+            
+                    <div class="control">
+                    </div>
+                </div>
+            </form>
+            
         </div>
+        {% endfor %}
 
-        <div class="items">
         
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-
-
-        <div class="items">
-        
-            {% for product in product %}
-            <img src="{{product.img.url}}" alt="">
-            <p>{{product.name}} ¥ {{product.price}}</p>
-            {% endfor %}
-        </div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
-<div class="items">
-
-    {% for product in product %}
-    <img src="{{product.img.url}}" alt="">
-    <p>{{product.name}} ¥ {{product.price}}</p>
-    {% endfor %}
-</div>
-
 
 
 </div>
@@ -328,84 +163,20 @@
             </tr>
         </thead>
         <tbody>
-    {% for product in product %}
-
-            <tr>
-                <th scope="row">1</th>
-                <td>{{product.name}}</td>
-                <td>1</td>
-                <td>¥ {{product.price}}</td>
-            </tr>
-    {% endfor %}
-
-
-
-    {% for product in product %}
     
-    <tr>
-        <th scope="row">2</th>
-        <td>{{product.name}}</td>
-        <td>2</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-
-
-    {% for product in product %}
-    
-    <tr>
-        <th scope="row">3</th>
-        <td>{{product.name}}</td>
-        <td></td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-
-    {% for product in product %}
-    
-    <tr>
-        <th scope="row">4</th>
-        <td>{{product.name}}</td>
-        <td>1</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-    {% for product in product %}
-    
+    {%  for item in cart %}
     <tr>
         <th scope="row">5</th>
-        <td>{{product.name}}</td>
-        <td>1</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-
-    {% for product in product %}
-    
-    <tr>
-        <th scope="row">5</th>
-        <td>{{product.name}}</td>
-        <td>1</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-    {% for product in product %}
-    
-    <tr>
-        <th scope="row">5</th>
-        <td>{{product.name}}</td>
-        <td>1</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
-    {% endfor %}
-    {% for product in product %}
-    
-    <tr>
-        <th scope="row">5</th>
-        <td>{{product.name}}</td>
-        <td>1</td>
-        <td>¥ {{product.price}}</td>
-    </tr>
+        <td>{{item.product.name}}</td>
+        <td >
+        
+        
+            <a href="?change_quantity={{ item.id }}&quantity=-1"> - </a>
+            {{ item.quantity }}
+            <a href="?change_quantity={{ item.id }}&quantity=1"> +</a>
+        </td>
+        <td>¥ {{ item.total_price }}</td>
+        </tr>
     {% endfor %}
 
 

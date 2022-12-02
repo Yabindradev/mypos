@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SESSION_COOKIE_AGE = 86400
+ORDER_SESSION_ID = ('order')
 
 # Application definition
 
